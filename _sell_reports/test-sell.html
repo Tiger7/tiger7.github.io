@@ -1,0 +1,60 @@
+---
+layout: none
+title: "첫 번째 매도 리포트"
+date: 2026-10-30
+description: "매도 리포트가 정상적으로 표시되는지 확인하는 테스트입니다."
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>첫 번째 매도 리포트</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0b0f14;
+      color: #e5e7eb;
+      font-family: sans-serif;
+      line-height: 1.8;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    a {
+      color: #00e5a0;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <a href="{{ '/' | relative_url }}">← 홈페이지로</a>
+
+    <h1>첫 번째 매도 리포트</h1>
+
+    <p>이 화면이 보이면 매도 리포트 페이지가 만들어진 것입니다.</p>
+
+    <h2>매도 판단</h2>
+    <p>여기에 매도 이유를 작성하면 됩니다.</p>
+
+    <button onclick="alert('버튼이 정상적으로 작동합니다!')">
+      웹앱 기능 테스트
+    </button>
+  </main>
+</body>
+</html>
