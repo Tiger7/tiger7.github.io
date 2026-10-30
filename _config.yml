@@ -2,3 +2,7 @@ title: Tiger7 Invest
 description: Systematic Theme security Research
 baseurl: ""
 url: "https://tiger7.github.io"
+collections:
+  sell_reports:
+    output: true
+    permalink: /sell-reports/:path/
