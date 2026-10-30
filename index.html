@@ -526,6 +526,49 @@ layout: null
     </div>
   </section>
 
+<!-- 매도 리포트 목록 시작 -->
+<section id="sell-reports">
+  <div class="container">
+
+    <div class="section-head">
+      <h2>매도 리포트</h2>
+
+      <span class="count">
+        {{ site.sell_reports.size }} reports
+      </span>
+    </div>
+
+    <div class="post-grid">
+      {% assign reports = site.sell_reports | sort: "date" | reverse %}
+
+      {% for report in reports %}
+        <a href="{{ report.url | relative_url }}" class="post-card">
+
+          <span class="post-date">
+            {{ report.date | date: "%Y.%m.%d" }}
+          </span>
+
+          <h3>{{ report.title | escape }}</h3>
+
+          <p>{{ report.description | escape }}</p>
+
+          <span class="post-meta">
+            리포트 읽기 →
+          </span>
+
+        </a>
+      {% else %}
+        <div class="empty-state">
+          <p>아직 등록된 매도 리포트가 없습니다.</p>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+<!-- 매도 리포트 목록 끝 -->
+  
+  
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container footer-inner">
