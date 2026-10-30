@@ -6,12 +6,19 @@ layout: null
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Tiger7 Investor · 테마 증권 연구소</title>
-  <meta name="description" content="체계적 테마 증권에 대한 월간 연구 자료 아카이브">
-  
+  <meta
+    name="description"
+    content="체계적 테마 증권에 대한 Monthly Research Long 및 Short 자료 아카이브"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
@@ -47,14 +54,21 @@ layout: null
       overflow-x: hidden;
     }
 
-    /* Background grid + glow */
+    /* ===== BACKGROUND ===== */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background-image: 
-        linear-gradient(rgba(0, 229, 160, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 229, 160, 0.03) 1px, transparent 1px);
+      background-image:
+        linear-gradient(
+          rgba(0, 229, 160, 0.03) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(0, 229, 160, 0.03) 1px,
+          transparent 1px
+        );
       background-size: 60px 60px;
       pointer-events: none;
       z-index: 0;
@@ -68,7 +82,11 @@ layout: null
       transform: translateX(-50%);
       width: 80vw;
       height: 80vh;
-      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+      background: radial-gradient(
+        circle,
+        var(--accent-glow) 0%,
+        transparent 60%
+      );
       pointer-events: none;
       z-index: 0;
       filter: blur(60px);
@@ -99,6 +117,7 @@ layout: null
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 24px;
     }
 
     .logo {
@@ -110,25 +129,34 @@ layout: null
       gap: 10px;
       text-decoration: none;
       color: var(--text);
+      flex-shrink: 0;
     }
 
     .logo-mark {
       width: 26px;
       height: 26px;
       background: var(--accent);
-      clip-path: polygon(0 100%, 35% 40%, 55% 65%, 100% 0, 100% 100%);
+      clip-path: polygon(
+        0 100%,
+        35% 40%,
+        55% 65%,
+        100% 0,
+        100% 100%
+      );
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px 24px;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--text-dim);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 500;
       transition: color 0.2s;
     }
@@ -160,6 +188,7 @@ layout: null
       width: 32px;
       height: 1px;
       background: var(--accent);
+      flex-shrink: 0;
     }
 
     h1 {
@@ -183,7 +212,7 @@ layout: null
       line-height: 1.7;
     }
 
-    /* Ticker tape */
+    /* ===== TICKER ===== */
     .ticker {
       margin-top: 48px;
       border-top: 1px solid var(--border);
@@ -213,19 +242,27 @@ layout: null
     }
 
     @keyframes scroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     /* ===== SECTION HEADERS ===== */
     section {
       padding: 60px 0;
+      scroll-margin-top: 110px;
     }
 
     .section-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
       margin-bottom: 48px;
       border-bottom: 1px solid var(--border);
       padding-bottom: 20px;
@@ -301,6 +338,7 @@ layout: null
       letter-spacing: -0.01em;
       margin-bottom: 12px;
       line-height: 1.4;
+      overflow-wrap: anywhere;
     }
 
     .post-card p {
@@ -330,20 +368,18 @@ layout: null
 
     .post-card.featured {
       grid-column: span 2;
-      background: linear-gradient(135deg, var(--bg-soft) 0%, var(--surface) 100%);
+      background: linear-gradient(
+        135deg,
+        var(--bg-soft) 0%,
+        var(--surface) 100%
+      );
     }
 
     .post-card.featured h3 {
       font-size: 1.5rem;
     }
 
-    @media (max-width: 700px) {
-      .post-card.featured {
-        grid-column: span 1;
-      }
-    }
-
-    /* Empty state */
+    /* ===== EMPTY STATE ===== */
     .empty-state {
       grid-column: 1 / -1;
       text-align: center;
@@ -360,6 +396,7 @@ layout: null
       border-radius: 4px;
       color: var(--accent);
       font-size: 0.85rem;
+      overflow-wrap: anywhere;
     }
 
     /* ===== FOOTER ===== */
@@ -393,7 +430,7 @@ layout: null
       text-decoration: underline;
     }
 
-    /* Reveal animation */
+    /* ===== REVEAL ANIMATION ===== */
     .reveal {
       opacity: 0;
       transform: translateY(20px);
@@ -413,21 +450,80 @@ layout: null
     .reveal:nth-child(4) { animation-delay: 0.4s; }
     .reveal:nth-child(5) { animation-delay: 0.5s; }
     .reveal:nth-child(6) { animation-delay: 0.6s; }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px 20px;
+      }
+
+      .nav-links {
+        gap: 10px 18px;
+      }
+
+      .nav-links a {
+        font-size: 0.78rem;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      header.hero {
+        padding: 80px 0 60px;
+      }
+
+      .post-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .post-card.featured {
+        grid-column: span 1;
+      }
+
+      .section-head h2 {
+        font-size: 1.35rem;
+      }
+
+      section {
+        scroll-margin-top: 170px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <!-- ===== NAV ===== -->
   <nav>
     <div class="nav-inner">
-      <a href="/" class="logo">
+      <a href="{{ '/' | relative_url }}" class="logo">
         <span class="logo-mark"></span>
         Tiger7 INVESTOR
       </a>
+
       <ul class="nav-links">
-        <li><a href="#research">Research</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="https://github.com/tiger7" target="_blank">GitHub ↗</a></li>
+        <li>
+          <a href="#research">Monthly Research (Long)</a>
+        </li>
+        <li>
+          <a href="#sell-reports">Monthly Research (Short)</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/tiger7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -435,14 +531,18 @@ layout: null
   <!-- ===== HERO ===== -->
   <header class="hero">
     <div class="container">
-      <div class="eyebrow reveal">Systematic Theme Security Research</div>
+      <div class="eyebrow reveal">
+        Systematic Theme Security Research
+      </div>
+
       <h1 class="reveal">
         시장의 <span class="highlight">테마</span>를<br>
         체계적으로 추적합니다.
       </h1>
+
       <p class="hero-sub reveal">
-        Tiger7 Investor는 테마 증권에 대한 실증 연구와 
-        월간 발표 자료를 공유하는 공간입니다. 데이터 기반의 정량적 접근으로 
+        Tiger7 Investor는 테마 증권에 대한 실증 연구와
+        월간 발표 자료를 공유하는 공간입니다. 데이터 기반의 정량적 접근으로
         시장의 구조적 움직임을 분석합니다.
       </p>
 
@@ -465,46 +565,63 @@ layout: null
     </div>
   </header>
 
-  <!-- ===== RESEARCH POSTS ===== -->
+  <!-- ===== 1. MONTHLY RESEARCH (LONG) ===== -->
+  <!-- 기존 _posts 폴더의 글을 표시합니다. -->
   <section id="research">
     <div class="container">
       <div class="section-head">
-        <h2>Monthly Research</h2>
-        <span class="count">{{ site.posts.size }} posts</span>
+        <h2>Monthly Research (Long)</h2>
+        <span class="count">{{ site.posts.size }} reports</span>
       </div>
 
       <div class="post-grid">
         {% for post in site.posts %}
           {% if forloop.first %}
             <!-- 최신 글 = Featured -->
-            <a href="{{ post.url | relative_url }}" class="post-card featured reveal">
-              <span class="post-date">{{ post.date | date: "%Y · %m" }} — LATEST</span>
-              <h3>{{ post.title }}</h3>
+            <a
+              href="{{ post.url | relative_url }}"
+              class="post-card featured reveal"
+            >
+              <span class="post-date">
+                {{ post.date | date: "%Y · %m" }} — LATEST
+              </span>
+
+              <h3>{{ post.title | escape }}</h3>
+
               {% if post.excerpt %}
                 <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
               {% elsif post.description %}
-                <p>{{ post.description }}</p>
+                <p>{{ post.description | escape }}</p>
               {% endif %}
+
               <span class="post-meta">발표자료 보기</span>
             </a>
           {% else %}
-            <a href="{{ post.url | relative_url }}" class="post-card reveal">
-              <span class="post-date">{{ post.date | date: "%Y · %m" }}</span>
-              <h3>{{ post.title }}</h3>
+            <a
+              href="{{ post.url | relative_url }}"
+              class="post-card reveal"
+            >
+              <span class="post-date">
+                {{ post.date | date: "%Y · %m" }}
+              </span>
+
+              <h3>{{ post.title | escape }}</h3>
+
               {% if post.excerpt %}
                 <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
               {% elsif post.description %}
-                <p>{{ post.description }}</p>
+                <p>{{ post.description | escape }}</p>
               {% endif %}
+
               <span class="post-meta">발표자료 보기</span>
             </a>
           {% endif %}
         {% else %}
           <div class="empty-state">
-            <p>아직 발표된 자료가 없습니다.</p>
+            <p>아직 등록된 Long 리서치가 없습니다.</p>
             <p style="margin-top: 12px;">
-              <code>_posts/YYYY-MM-DD-title.html</code> 형식으로 파일을 추가하면 
-              자동으로 여기에 표시됩니다.
+              <code>_posts/YYYY-MM-DD-title.html</code>
+              형식으로 파일을 추가하면 여기에 표시됩니다.
             </p>
           </div>
         {% endfor %}
@@ -512,68 +629,80 @@ layout: null
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ===== 2. MONTHLY RESEARCH (SHORT) ===== -->
+  <!-- 기존 _sell_reports 폴더의 글을 표시합니다. -->
+  <section id="sell-reports">
+    <div class="container">
+      <div class="section-head">
+        <h2>Monthly Research (Short)</h2>
+        <span class="count">
+          {{ site.sell_reports.size }} reports
+        </span>
+      </div>
+
+      <div class="post-grid">
+        {% assign reports = site.sell_reports | sort: "date" | reverse %}
+
+        {% for report in reports %}
+          <a
+            href="{{ report.url | relative_url }}"
+            class="post-card"
+          >
+            <span class="post-date">
+              {{ report.date | date: "%Y.%m.%d" }}
+            </span>
+
+            <h3>{{ report.title | escape }}</h3>
+
+            {% if report.description %}
+              <p>{{ report.description | escape }}</p>
+            {% endif %}
+
+            <span class="post-meta">리포트 읽기</span>
+          </a>
+        {% else %}
+          <div class="empty-state">
+            <p>아직 등록된 Short 리서치가 없습니다.</p>
+            <p style="margin-top: 12px;">
+              <code>_sell_reports/리포트파일.html</code>
+              형식으로 파일을 추가하면 여기에 표시됩니다.
+            </p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. ABOUT ===== -->
   <section id="about">
     <div class="container">
       <div class="section-head">
         <h2>About</h2>
       </div>
+
       <p style="max-width: 720px; color: var(--text-dim); font-size: 1.05rem; line-height: 1.8;">
-        Tiger7 Investor는 시장의 비효율과 테마 현상을 정량적으로 연구하는 개인 연구 
-        프로젝트입니다. 매달 한 두개의 주제를 선정하여 체계적 비이성적인 시장(Irrational Market)에 대한 
+        Tiger7 Investor는 시장의 비효율과 테마 현상을 정량적으로 연구하는 개인 연구
+        프로젝트입니다. 매달 한 두개의 주제를 선정하여 체계적 비이성적인 시장(Irrational Market)에 대한
         분석과 발표 자료를 공유합니다. 모든 자료는 오픈소스 정신에 따라 공개됩니다.
       </p>
     </div>
   </section>
 
-<!-- 매도 리포트 목록 시작 -->
-<section id="sell-reports">
-  <div class="container">
-
-    <div class="section-head">
-      <h2>매도 리포트</h2>
-
-      <span class="count">
-        {{ site.sell_reports.size }} reports
-      </span>
-    </div>
-
-    <div class="post-grid">
-      {% assign reports = site.sell_reports | sort: "date" | reverse %}
-
-      {% for report in reports %}
-        <a href="{{ report.url | relative_url }}" class="post-card">
-
-          <span class="post-date">
-            {{ report.date | date: "%Y.%m.%d" }}
-          </span>
-
-          <h3>{{ report.title | escape }}</h3>
-
-          <p>{{ report.description | escape }}</p>
-
-          <span class="post-meta">
-            리포트 읽기 →
-          </span>
-
-        </a>
-      {% else %}
-        <div class="empty-state">
-          <p>아직 등록된 매도 리포트가 없습니다.</p>
-        </div>
-      {% endfor %}
-    </div>
-
-  </div>
-</section>
-<!-- 매도 리포트 목록 끝 -->
-  
-  
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container footer-inner">
-      <p>© {{ site.time | date: "%Y" }} 피지스 투자연구소 · Systematic Security Research</p>
-      <a href="https://github.com/tiger7" target="_blank">github.com/tiger7 ↗</a>
+      <p>
+        © {{ site.time | date: "%Y" }}
+        피지스 투자연구소 · Systematic Security Research
+      </p>
+
+      <a
+        href="https://github.com/tiger7"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/tiger7 ↗
+      </a>
     </div>
   </footer>
 
