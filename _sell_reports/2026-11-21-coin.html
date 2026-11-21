@@ -837,7 +837,10 @@ Binance 리스크</h2>
 
 <script>
 (function() {
+  'use strict';
+
   var stage = document.getElementById('stage');
+  var viewport = document.getElementById('viewport');
   var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
   var prev = document.getElementById('prev');
   var next = document.getElementById('next');
@@ -852,16 +855,41 @@ Binance 리스크</h2>
   var timerInterval = null;
   var timerRunning = false;
 
-  function fitStage() {
-    var vp = document.querySelector('.viewport');
-    var vw = vp.clientWidth;
-    var vh = vp.clientHeight;
-    var scale = Math.min(vw / 1200, vh / 720);
-    stage.style.transform = 'scale(' + scale + ')';
-    if (window.innerWidth < 700) document.body.classList.add('compact');
-    else document.body.classList.remove('compact');
+  /* ===== §4-a ~ §4-d: 캔버스 치수 선택 + 뷰포트 보정 + 여백 없음 + 초기 강제 실행 ===== */
+  function layout() {
+    // 4-a: compact 토글을 스케일 계산보다 먼저
+    var isCompact = window.innerWidth < 700;
+    document.body.classList.toggle('compact', isCompact);
+
+    // 4-a: 캔버스 기준 치수 — CSS `.compact .stage`와 반드시 일치
+    var W = isCompact ? 480 : 1200;
+    var H = isCompact ? 860 : 720;
+
+    // 4-b: viewport.clientHeight 사용 (window.innerHeight 아님)
+    var vw = viewport.clientWidth;
+    var vh = viewport.clientHeight;
+
+    // 4-c: 양쪽 모두 여백 0
+    var s = Math.min(vw / W, vh / H);
+
+    // stage 실제 치수도 명시 (CSS와 일치)
+    stage.style.width = W + 'px';
+    stage.style.height = H + 'px';
+    stage.style.transform = 'scale(' + s + ')';
   }
 
+  // 4-e: window 기준 리스너
+  window.addEventListener('resize', layout);
+  window.addEventListener('orientationchange', layout);
+  // 4-d: 초기 1회 + 폰트 로딩 후 1회 더
+  document.addEventListener('DOMContentLoaded', layout);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(layout);
+  }
+  // 즉시 1회 (DOMContentLoaded 이전 안전망)
+  layout();
+
+  /* ===== 슬라이드 전환 (§4-e) ===== */
   function go(n) {
     idx = ((n % N) + N) % N;
     slides.forEach(function(s, i) { s.classList.toggle('active', i === idx); });
@@ -883,6 +911,7 @@ Binance 리스크</h2>
     else if (e.key === 't' || e.key === 'T') { e.preventDefault(); openToc(); }
   });
 
+  /* ===== 원고 토글 (§4-e) ===== */
   document.querySelectorAll('.source-toggle').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var id = btn.getAttribute('aria-controls');
@@ -906,6 +935,7 @@ Binance 리스크</h2>
     });
   });
 
+  /* ===== 목차 다이얼로그 (§4-e) ===== */
   var tocDialog = document.getElementById('toc-dialog');
   var tocContainer = tocDialog.querySelector('.toc');
   slides.forEach(function(s, i) {
@@ -921,10 +951,12 @@ Binance 리스크</h2>
   document.getElementById('menu').addEventListener('click', openToc);
   document.getElementById('toc-close').addEventListener('click', function() { tocDialog.close(); });
 
+  /* ===== 안내 다이얼로그 (§4-e) ===== */
   var infoDialog = document.getElementById('info-dialog');
   document.getElementById('info').addEventListener('click', function() { infoDialog.showModal(); });
   document.getElementById('info-close').addEventListener('click', function() { infoDialog.close(); });
 
+  /* ===== 전체화면 (§4-e) ===== */
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
       if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(function(){});
@@ -934,6 +966,7 @@ Binance 리스크</h2>
   }
   document.getElementById('fullscreen').addEventListener('click', toggleFullscreen);
 
+  /* ===== 인쇄 (§4-e) ===== */
   function doPrint() {
     document.body.classList.add('print-slides');
     document.body.classList.remove('print-manuscript');
@@ -942,6 +975,7 @@ Binance 리스크</h2>
   }
   document.getElementById('print').addEventListener('click', doPrint);
 
+  /* ===== 타이머 (§4-e) ===== */
   function fmt(s) {
     var m = Math.floor(s / 60), sec = s % 60;
     return String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
@@ -969,9 +1003,7 @@ Binance 리스크</h2>
     timerRunning = false;
   });
 
-  window.addEventListener('resize', fitStage);
-  window.addEventListener('orientationchange', fitStage);
-  fitStage();
+  /* ===== 초기화 ===== */
   go(0);
 })();
 </script>
