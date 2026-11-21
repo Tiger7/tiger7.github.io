@@ -1,0 +1,19 @@
+IMPORTANT LEGAL DISCLAIMER / 중요 법적 면책 고지
+
+English:
+1. No Offer or Solicitation: This GitHub Pages site and its content (the "Content") are provided for informational and educational purposes only. The Content does not constitute an offer to sell, a solicitation of an offer to buy, or a recommendation regarding any security, investment product, or financial instrument. Nothing contained herein shall be construed as investment advice, legal advice, tax advice, or accounting advice.
+2. No Advisory Relationship: I am not a registered investment adviser, broker-dealer, or financial planner in any jurisdiction, including but not limited to the Republic of Korea (under the Financial Investment Services and Capital Markets Act) and the United States (under the Investment Advisers Act of 1940). Your access to or use of this site does not create an advisory, fiduciary, or professional-client relationship between you and the author.
+3. Assumption of Risk and Due Diligence: All investment involves substantial risk, including the possible loss of principal. Past performance is not indicative of future results. You are solely responsible for conducting your own independent research and due diligence, and for consulting with your own qualified financial, legal, and tax professionals before making any investment decision. You agree that you will not rely on the Content as a basis for any investment decision.
+4. Accuracy and Completeness: The Content is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied, including but not limited to accuracy, completeness, timeliness, or fitness for a particular purpose. I make no representation or warranty that the information contained herein is accurate, complete, or current. The Content may contain errors or omissions.
+5. Limitation of Liability: To the maximum extent permitted by applicable law, I disclaim all liability for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or related to your access to, use of, or reliance on the Content. This limitation applies regardless of the legal theory (contract, tort, negligence, strict liability, or otherwise) and even if I have been advised of the possibility of such damages.
+6. Forward-Looking Statements: Any forward-looking statements, projections, or estimates contained herein are based on assumptions that may not materialize. Actual results may differ materially. I undertake no obligation to update any forward-looking statement.
+7. External Links: This site may contain links to third-party websites. I am not responsible for the content, accuracy, or practices of any third-party sites.
+
+한국어:
+1. 청약 권유 및 자문 부인: 본 GitHub Pages 사이트 및 그 콘텐츠(이하 "콘텐츠")는 오직 정보 제공 및 교육 목적으로 제공됩니다. 본 콘텐츠는 특정 증권, 투자 상품 또는 금융 상품에 대한 매도 청약, 매수 청약의 권유 또는 추천을 구성하지 않습니다. 본문의 어떠한 내용도 투자 자문, 법률 자문, 세무 자문 또는 회계 자문으로 해석되어서는 안 됩니다.
+2. 자문 관계의 부재: 작성자는 한국 「자본시장과 금융투자업에 관한 법률」 및 미국 「1940년 투자자문업법」을 포함하되 이에 국한되지 않는 어떠한 관할권에서도 등록된 투자자문업자, 투자중개업자 또는 재무설계사가 아닙니다. 귀하의 본 사이트 접속 또는 이용은 귀하와 작성자 간에 자문, 수탁 또는 전문가-고객 관계를 형성하지 않습니다.
+3. 위험 감수 및 실사 의무: 모든 투자에는 원금 손실 가능성을 포함한 중대한 위험이 수반됩니다. 과거 성과는 미래 결과를 보장하지 않습니다. 귀하는 전적으로 본인 책임하에 독립적인 조사와 실사를 수행하고, 투자 결정을 내리기 전에 자격을 갖춘 재무, 법률 및 세무 전문가와 상담해야 합니다. 귀하는 어떠한 투자 결정의 근거로 콘텐츠를 신뢰하지 않을 것에 동의합니다.
+4. 정확성 및 완전성: 콘텐츠는 정확성, 완전성, 적시성 또는 특정 목적에 대한 적합성을 포함하되 이에 국한되지 않는 어떠한 명시적 또는 묵시적 보증도 없이 "있는 그대로" 제공됩니다. 작성자는 본문에 포함된 정보가 정확하거나 완전하거나 최신 상태임을 진술하거나 보증하지 않습니다. 콘텐츠에는 오류나 누락이 있을 수 있습니다.
+5. 책임의 제한: 관련 법률이 허용하는 최대 한도 내에서, 작성자는 귀하의 콘텐츠 접속, 이용 또는 신뢰로 인해 발생하거나 이와 관련된 모든 직접적, 간접적, 부수적, 특별, 결과적 또는 징벌적 손해에 대한 모든 책임을 부인합니다. 본 책임 제한은 법적 이론(계약, 불법행위, 과실, 무과실 책임 등)에 관계없이 적용되며, 작성자가 그러한 손해의 가능성을 고지받은 경우에도 적용됩니다.
+6. 미래 예측 진술: 본문에 포함된 모든 미래 예측 진술, 전망 또는 추정은 실현되지 않을 수 있는 가정에 기반합니다. 실제 결과는 중대하게 다를 수 있습니다. 작성자는 미래 예측 진술을 업데이트할 의무를 부담하지 않습니다.
+7. 외부 링크: 본 사이트에는 제3자 웹사이트 링크가 포함될 수 있습니다. 작성자는 제3자 사이트의 콘텐츠, 정확성 또는 관행에 대해 책임지지 않습니다.
